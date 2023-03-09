@@ -1,0 +1,35 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <!-- Correcting zooming issue -->
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <!-- Library untuk VR membangun 3D -->
+        <script src="./js/aframe/aframe.min.js"></script>
+        <!-- Library untuk AR yang melakukan pengenalan marker dan menyematkan kamera-->
+        <script src="./js/arjs/aframe-ar.js"></script>
+        <title>Web Augmented Reality with AR.js</title>
+    </head>
+
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs>
+
+            <a-marker>
+               <!-- Rumah -->
+               <a-box position="0 0.5 -0.5" rotation="90 0 -45" color="grey" scale="0.7 0.7 0.8"></a-box>
+               <a-box position="0 0.5 0" rotation="-90 0 0" color="pink"></a-box>
+               <!-- Matahari -->
+               <a-circle position="1 0 -2" rotation="-90 0 90" radius="0.5"  color="yellow"></a-circle>
+               <!-- Text -->
+               <a-text value="Rumah" position="0 0.5 0.9" rotation="-90 0 0" color="#CBE4DE" align="center"></a-text>
+               <!-- Pohon -->
+               <a-cylinder position="2 0 0" rotation="90 0 0" radius="0.1" height="1" color="brown"></a-cylinder>
+               <a-box position="2 0 -1" rotation="90 0 0" width="0.7" height="1" color="green"></a-box>
+            </a-marker>
+
+            <a-entity camera>
+            </a-entity>
+        </a-scene>
+    </body>
+
+</html>
